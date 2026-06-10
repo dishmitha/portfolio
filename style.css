@@ -503,29 +503,36 @@ section {
     background-color: var(--surface);
 }
 
-.cert-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 50px;
-    justify-items: center;
+.cert-grid{
+    display:flex;
+    gap:25px;
+    overflow-x:auto;
+    padding:20px;
+    scrollbar-width:none;
+    scroll-behavior:smooth;
 }
 
-.cert-card {
-    position: relative;
-    overflow: hidden;
-    border-radius: 15px;
-    background: var(--bg-color);
-    border: 1px solid rgba(212, 175, 55, 0.2);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
-    transition: all 0.4s ease;
-    cursor: pointer;
+.cert-grid::-webkit-scrollbar{
+    display:none;
 }
 
-.cert-card img {
-    width: 100%;
-    display: block;
-    transition: transform 0.6s ease;
+.cert-card{
+    flex-shrink:0;
+    border-radius:15px;
+    overflow:hidden;
+    transition:0.4s ease;
+    background:transparent;
+    border:none;
 }
+
+.cert-card img{
+    display:block;
+    height:350px;   /* same size for all */
+    width:auto;     /* keeps original certificate ratio */
+    object-fit:contain;
+    border-radius:15px;
+}
+
 
 .cert-overlay {
     position: absolute;
@@ -550,10 +557,8 @@ section {
     text-shadow: 0 0 15px var(--gold-glow);
 }
 
-.cert-card:hover {
-    border-color: var(--gold);
-    box-shadow: 0 20px 40px rgba(212, 175, 55, 0.2);
-    transform: translateY(-10px);
+.cert-card:hover{
+    transform:translateY(-10px);
 }
 
 .cert-card:hover img {
