@@ -524,8 +524,8 @@ section {
 }
 
 .cert-card {
-    min-width: 280px;
-    max-width: 320px;
+    min-width: 220px;
+    max-width: 250px;
     flex-shrink: 0;
 
     position: relative;
