@@ -524,7 +524,8 @@ section {
 }
 
 .cert-card {
-    min-width: 150px; /* certificate width */
+    min-width: 280px;
+    max-width: 320px;
     flex-shrink: 0;
 
     position: relative;
@@ -532,17 +533,16 @@ section {
     border-radius: 15px;
 
     background: var(--bg-color);
-    border: 1px solid rgba(212, 175, 55, 0.2);
+    border: 1px solid rgba(212,175,55,0.2);
 
     box-shadow: 0 15px 35px rgba(0,0,0,0.5);
 
     transition: all 0.4s ease;
-    cursor: pointer;
 }
 
 .cert-card img {
     width: 100%;
-    height: auto;
+    height: 170px;
     display: block;
 }
 
