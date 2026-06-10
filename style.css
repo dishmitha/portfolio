@@ -512,12 +512,19 @@ section {
     padding: 20px 0;
     scrollbar-width: none;
 }
+.cert-grid {
+    scroll-snap-type: x mandatory;
+}
 
+.cert-card {
+    scroll-snap-align: center;
+}
 .cert-grid::-webkit-scrollbar {
     display: none;
 }
+
 .cert-card {
-    min-width: 500px; /* certificate width */
+    min-width: 150px; /* certificate width */
     flex-shrink: 0;
 
     position: relative;
@@ -537,13 +544,6 @@ section {
     width: 100%;
     height: auto;
     display: block;
-}
-.cert-grid {
-    scroll-snap-type: x mandatory;
-}
-
-.cert-card {
-    scroll-snap-align: center;
 }
 
 .cert-overlay {
