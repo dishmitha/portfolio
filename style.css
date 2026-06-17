@@ -585,8 +585,8 @@ section {
 /* Mobile Responsive */
 @media (max-width: 768px) {
     .cert-card {
-        min-width: 280px;
-        max-width: 280px;
+        min-width: 340px;
+        max-width: 340px;
     }
 
     .cert-grid {
