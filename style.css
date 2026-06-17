@@ -517,8 +517,8 @@ section {
 }
 
 .cert-card {
-    min-width: 300px;
-    max-width: 300px;
+    min-width: 360px;
+    max-width: 360px;
     flex-shrink: 0;
 
     position: relative;
@@ -581,7 +581,19 @@ section {
 .cert-card:hover .cert-overlay i {
     transform: scale(1);
 }
-/* Contact Section */
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .cert-card {
+        min-width: 280px;
+        max-width: 280px;
+    }
+
+    .cert-grid {
+        gap: 15px;
+        padding: 10px;
+    }
+}/* Contact Section */
 .contact {
     background-color: var(--bg-color);
     text-align: center;
