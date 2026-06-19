@@ -882,10 +882,22 @@ footer {
 }
 
 .projects-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(450px,1fr));
-    gap:40px;
-    margin-top:50px;
+    display:flex;
+    gap:25px;
+    overflow-x:auto;
+    padding:20px;
+    scrollbar-width:none;
+    scroll-behavior:smooth;
+}
+
+.projects-grid::-webkit-scrollbar{
+    display:none;
+}
+
+.project-card{
+    min-width:420px;
+    max-width:420px;
+    flex-shrink:0;
 }
 
 .project-card{
@@ -942,8 +954,50 @@ footer {
 
 .project-links{
     display:flex;
-    gap:15px;
+    gap:10px;
     flex-wrap:wrap;
+    margin-top:20px;
+}
+
+/* Smaller Project Buttons */
+.project-links .gold-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:10px 18px;
+    font-size:0.82rem;
+    font-weight:600;
+
+    border-radius:25px;
+
+    background:linear-gradient(
+        135deg,
+        var(--gold),
+        #b8962e
+    );
+
+    color:#000;
+    text-decoration:none;
+
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+
+    transition:all 0.3s ease;
+
+    min-width:110px;
+}
+
+.project-links .gold-btn:hover{
+    transform:translateY(-3px);
+
+    background:linear-gradient(
+        135deg,
+        var(--gold-light),
+        var(--gold)
+    );
+
+    box-shadow:0 8px 18px rgba(212,175,55,0.4);
 }
 .card {
   background: #111;
